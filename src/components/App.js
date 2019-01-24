@@ -55,9 +55,19 @@ class App extends Component {
   }
 
   markAllComplete = () => {
+    let length = this.state.todoList.length;
+    let allCompleted = true;
+    for (let i = 0; i < length; i++) {
+      if (this.state.todoList[i].finished === false) {
+        allCompleted = false;
+      }
+    }
+
+    let finishedState = !allCompleted;
+
     this.setState((prevState) => {
       prevState.todoList.map(todo => {
-        todo.finished = true;
+        todo.finished = finishedState;
         return todo
       })
       return {
