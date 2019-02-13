@@ -12,7 +12,7 @@ const mapStatetoProps = (state) => {
 
     return {
         filter: state.filterRed.filter,
-        total: state.todoRed.todoList.length,
+        total: state.todoRed.total,
         count,
     }
 }
