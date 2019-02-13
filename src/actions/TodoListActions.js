@@ -13,7 +13,7 @@ export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
  */
 
 export function addTodo(todo) {
-  return { type: ADD_TODO, todo, }
+  return { type: ADD_TODO, todo }
 }
 
 export function editTodo(edited, index) {

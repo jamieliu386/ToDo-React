@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -29,11 +30,11 @@ class Header extends React.Component {
             return
         }
 
-        this.props.addItem({
+        this.props.addTodo({
             title: this.state.todo,
             finished: false,
             editing: false,
-        })
+        });
     }
 
     render(){
@@ -55,4 +56,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header 
+export default Header;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Blah from './Blah.js'
-import Header from './Header.js'
+import HeaderContainer from './containers/HeaderContainer.js'
 import Main from './Main.js'
 import Footer from './Footer.js'
 
@@ -89,9 +88,7 @@ class App extends Component {
     return (
       <div>
         <section className="todoapp">
-          <Header 
-            addItem={this.addItem}
-          />
+          <HeaderContainer />
           <Main 
             todoList={this.state.todoList}
             editItem={this.editItem}
