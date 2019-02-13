@@ -2,8 +2,8 @@
 Built from the skeleton code at https://github.com/connorbo97/ToDoMVC-React-Base.git
 in accordance with the [spec](https://github.com/tastejs/todomvc/blob/master/app-spec.md#functionality)
 
-## Features to implement:
-editing
+## Features not implemented:
+ability to edit a todo
 
 ## How to start the project
 1. git clone https://github.com/jamieliu386/ToDoMVC-React.git
