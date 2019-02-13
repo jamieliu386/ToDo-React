@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TodoList from './TodoList'
 import Todo from './Todo'
+import TodoListContainer from './containers/TodoListContainer';
 
 class Main extends React.Component {
     constructor(props) {
@@ -22,11 +23,7 @@ class Main extends React.Component {
         return (
             <section className="main">
                 {this.renderMarkAllComplete()}
-                <TodoList 
-                    todoList={this.props.todoList}
-                    editItem={this.props.editItem}
-                    filter={this.props.filter}
-                />
+                <TodoListContainer />
             </section>
         )
             {/*
