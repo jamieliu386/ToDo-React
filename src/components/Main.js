@@ -20,6 +20,7 @@ class Main extends React.Component {
     }
 
     render() {
+        if (this.props.count === 0) { return null }
         return (
             <section className="main">
                 {this.renderMarkAllComplete()}

@@ -35,26 +35,22 @@ const TodoListReducer = (state = initialState, action) => {
       return Object.assign({}, state, { todoList: filteredList} )
     
     case MARK_ALL_COMPLETE:
-      let length = this.state.todoList.length;
+      let length = state.todoList.length;
       let allCompleted = true;
       for (let i = 0; i < length; i++) {
-        if (this.state.todoList[i].finished === false) {
+        if (state.todoList[i].finished === false) {
           allCompleted = false;
           break
         }
       }
-
-      let finishedState = !allCompleted;
-      let cList = state.list.map(todo => {
+      let cList = state.todoList.map(todo => {
         let edited = todo 
-        edited.finished = finishedState
+        edited.finished = !allCompleted
         return edited
       })
       return Object.assign({}, state, { todoList: cList} )
     case CLEAR_COMPLETED:
-      let clearList = state.list.filter((todo) => {
-        todo.finished === false
-      })
+      let clearList = state.todoList.filter(todo => todo.finished === false )
       return Object.assign({}, state, { todoList: clearList} )
     default:
       return state

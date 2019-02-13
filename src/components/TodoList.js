@@ -23,7 +23,7 @@ class TodoList extends React.Component {
                         index={index}
                         {...todo}
                         todo={todo}
-                        editItem={(edited)=>this.props.editItem(edited, index)}
+                        editItem={(edited)=>this.props.editTodo(edited, index)}
                     />
                 )
             }
